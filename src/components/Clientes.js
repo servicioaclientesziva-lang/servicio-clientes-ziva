@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { db } from './firebaseConfig';
 
-console.log("Versión actualizada de clientes");
-
 function Clientes({ onRegresar, usuarioActual }) {
   const [clientes, setClientes] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
@@ -123,6 +121,9 @@ function Clientes({ onRegresar, usuarioActual }) {
 
   return (
     <div style={menuBoxStyle}>
+      {/* 👇 Línea agregada para mostrar el mensaje */}
+      <p style={{ color: 'green', fontWeight: 'bold' }}>Versión actualizada de clientes</p>
+
       <h2 style={{ marginBottom: '20px' }}>Agregar Registro</h2>
 
       <input style={inputStyle} placeholder="Nombre completo" value={nombre} onChange={e => setNombre(e.target.value)} />
