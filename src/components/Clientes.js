@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { db } from './firebaseConfig';
 
+console.log("Versión actualizada de clientes");
+
 function Clientes({ onRegresar, usuarioActual }) {
   const [clientes, setClientes] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
